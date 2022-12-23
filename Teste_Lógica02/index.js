@@ -7,17 +7,57 @@ e a soma das idades do homem mais novo com a mulher mais velha.*/
 //https://www.treinaweb.com.br/blog/estruturas-condicionais-e-estruturas-de-repeticao-em-javascript
 //Switch Case
 
+const homem1 = 35;
+const homem2 = 33;
 
-const homens = [];
-for (let indice = 0; indice < 100; indice += 2) {
-    homens.push(indice)
+const mulher1 = 35;
+const mulher2 = 33;
+
+let homemMaisVelho
+let homemMaisNovo
+
+idade.maisVelho, idade.maisNovo = verificarQuemMaisVelhoMaisNovo(homem1, homem2);
+console.log(homemMaisNovo)
+
+
+let mulherMaisVelha
+let mulherMaisNova
+
+if (mulher1 > mulher2) {
+    mulherMaisVelha = mulher1
+    mulherMaisNova = mulher2
+} else {
+    mulherMaisVelha = mulher2
+    mulherMaisNova = mulher1
+}
+console.log(mulherMaisVelha)
+
+const soma1 = homemMaisVelho + mulherMaisNova
+console.log(soma1)
+
+const soma2 = homemMaisNovo + mulherMaisVelha
+console.log(soma2)
+
+
+function verificarQuemMaisVelhoMaisNovo(idade1, idade2) {
+    let maisVelho
+    let maisNovo
+    if (idade1 > idade2) {
+        maisVelho = idade1;
+        maisNovo = idade2;
+    } else {
+        maisVelho = idade2;
+        maisNovo = idade1;
+    }
+    return { 'maisVelho': maisVelho, 'maisNovo': maisNovo }
 }
 
-console.log(homens)
+//Receber idades de 2 homens diferentes;
+//Receber idades de 2 mulheres diferentes;
+//Saber quem é o homem mais velho e o mais novo;
+//Saber quem é a mulher mais velha  e a mais nova;
+//Soma homem mais velho + mulher mais nova;
+//Soma homem mais novo + mulher mais velha;
 
-const mulheres = [];
-for (let indice = 0; indice < 100; indice += 3) {
-    mulheres.push(indice)
-}
-
-console.log(mulheres)
+//greicepazvargas@gmail.com
+//GreicePaz
